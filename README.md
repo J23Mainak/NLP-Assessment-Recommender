@@ -4,14 +4,14 @@ An **AI-powered recommendation system** that suggests the most relevant **SHL as
 
 ---
 
-## 🔗 Demo Video
+## Demo Video
 
 **Project Demo:**  
 --> https://drive.google.com/file/d/1Ba1Wx1xPJS7L92aoiVvLD9v1gezym8bQ/view?usp=drive_link
 
 ---
 
-## 📌 Key Features
+## Key Features
 
 - **Natural Language Query Understanding**
 - **Hybrid Retrieval Engine**
