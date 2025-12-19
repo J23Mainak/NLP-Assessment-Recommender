@@ -126,7 +126,7 @@ pip install -r requirements.txt
 ### 4️. Run Backend API
 
 ```bash
-uvicorn app:app --reload
+uvicorn app:app --reload --host 0.0.0.0 --port 8000
 ```
 
 API will be available at:
