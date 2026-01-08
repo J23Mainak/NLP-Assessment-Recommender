@@ -208,7 +208,7 @@ POST /recommend
 ## Recommendation Logic (High Level)
 
 1. **BM25** finds keyword matches
-2. **FAISS + embeddings** finds semantic matches
+2. **FAISS + Embeddings** finds semantic matches
 3. **Keyword filters** improve recall
 4. **Test-type heuristics** enforce balance
 5. **Weighted ensemble scoring** ranks candidates
