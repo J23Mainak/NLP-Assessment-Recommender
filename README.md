@@ -19,22 +19,18 @@ An **AI-powered recommendation system** that suggests the most relevant **SHL as
 
 ```
 User Query
-│
-▼
+    ↓
 Streamlit Frontend
-│
-▼
+    ↓
 FastAPI Backend
 │
 ├── BM25 Search (Lexical)
 ├── FAISS Search (Semantic)
 ├── Keyword Matching
 ├── Test-Type Heuristics
-│
-▼
+    ↓
 Ensemble Scoring & Balancing
-│
-▼
+    ↓
 Top-K SHL Assessment Recommendations
 ```
 
