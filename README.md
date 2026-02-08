@@ -1,35 +1,23 @@
 # SHL Assessment Recommender System
 
+[**Live Demo**](https://drive.google.com/file/d/1Ba1Wx1xPJS7L92aoiVvLD9v1gezym8bQ/view?usp=drive_link)
+
 An **AI-powered recommendation system** that suggests the most relevant **SHL assessments** based on natural language hiring queries. The system combines **lexical search (BM25)**, **semantic search (FAISS + embeddings)**, and **intelligent ranking logic** to deliver accurate, balanced, and explainable recommendations.
-
-
-## Demo Video
-
-[**Watch Project Demo Video**](https://drive.google.com/file/d/1Ba1Wx1xPJS7L92aoiVvLD9v1gezym8bQ/view?usp=drive_link)
-
----
 
 ## Key Features
 
 - **Natural Language Query Understanding**
-- **Hybrid Retrieval Engine**
-  - BM25 (lexical relevance)
-  - Dense embeddings + FAISS (semantic similarity)
-- **Ensemble Ranking**
-  - Weighted scoring from multiple retrieval strategies
-- **Balanced Recommendations**
-  - Ensures a mix of Knowledge (K) and Personality (P) tests
+- **Hybrid Retrieval Engine**: BM25 (lexical relevance) & Dense embeddings + FAISS
+- **Ensemble Ranking**: Weighted scoring from multiple retrieval strategies
+- **Balanced Recommendations**: Ensures a mix of Knowledge (K) and Personality (P) tests
 - **FastAPI-based Backend**
 - **Streamlit Frontend UI**
 - **Health Monitoring Endpoint**
 - Modular, extensible, and production-ready design
 
----
-
 ## System Architecture
 
 ```
-
 User Query
 │
 ▼
@@ -48,15 +36,11 @@ Ensemble Scoring & Balancing
 │
 ▼
 Top-K SHL Assessment Recommendations
-
 ```
 
----
-
-## 📂 Project Structure
+## > Project Structure
 
 ```
-
 SHL_Assessment_Recommender/
 │
 ├── app.py                     # FastAPI backend
@@ -75,10 +59,7 @@ SHL_Assessment_Recommender/
 │   └── crossencoder-retrained/
 │
 └── .env
-
 ````
-
----
 
 ## Tech Stack
 
@@ -91,20 +72,16 @@ SHL_Assessment_Recommender/
 | Data | Pandas, NumPy |
 | Deployment | Render, Streamlit Cloud |
 
----
-
 ## Installation & Local Setup
 
-### 1️. Clone the Repository
+### 1️) Clone the Repository
 
 ```bash
 git clone https://github.com/<your-username>/SHL-Assessment-Recommender.git
 cd SHL-Assessment-Recommender
 ````
 
----
-
-### 2️. Create Virtual Environment
+### 2️) Create Virtual Environment
 
 ```bash
 python -m venv venv
@@ -112,17 +89,13 @@ source venv/bin/activate      # Linux/Mac
 venv\Scripts\activate         # Windows
 ```
 
----
-
-### 3️. Install Dependencies
+### 3️) Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-### 4️. Run Backend API
+### 4️) Run Backend API
 
 ```bash
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
@@ -134,9 +107,7 @@ API will be available at:
 http://localhost:8000
 ```
 
----
-
-### 5️. Run Frontend
+### 5️) Run Frontend
 
 ```bash
 streamlit run streamlit_ui.py
@@ -148,11 +119,9 @@ Frontend will be available at:
 http://localhost:8501
 ```
 
----
-
 ## API Endpoints
 
-### Health Check
+### 1. Health Check
 
 ```http
 GET /health
@@ -169,9 +138,7 @@ GET /health
 }
 ```
 
----
-
-### Recommendation API
+### 2. Recommendation API
 
 ```http
 POST /recommend
@@ -203,18 +170,14 @@ POST /recommend
 }
 ```
 
----
-
 ## Recommendation Logic (High Level)
 
-1. **BM25** finds keyword matches
-2. **FAISS + Embeddings** finds semantic matches
-3. **Keyword filters** improve recall
-4. **Test-type heuristics** enforce balance
-5. **Weighted ensemble scoring** ranks candidates
-6. **Final balancing layer** selects top-K results
-
----
+- **BM25** finds keyword matches
+- **FAISS + Embeddings** finds semantic matches
+- **Keyword filters** improve recall
+- **Test-type heuristics** enforce balance
+- **Weighted ensemble scoring** ranks candidates
+- **Final balancing layer** selects top-K results
 
 ## Environment Variables
 
